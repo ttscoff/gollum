@@ -6,6 +6,7 @@ require 'ostruct'
 require 'grit'
 require 'github/markup'
 require 'sanitize'
+require 'kramdown'
 
 # internal
 require 'gollum/git_access'

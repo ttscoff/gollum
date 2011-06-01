@@ -247,7 +247,7 @@ module Gollum
     # Returns the String canonical name.
     def self.cname(name)
       name.respond_to?(:gsub)      ?
-        name.gsub(%r{[ /<>]}, '-') :
+        name.gsub(%r{[/<>]}, '-') :
         ''
     end
 

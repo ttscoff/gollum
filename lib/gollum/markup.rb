@@ -37,7 +37,8 @@ module Gollum
       data = extract_code(data)
       data = extract_tags(data)
       begin
-        data = GitHub::Markup.render(@name, data)
+				data = Kramdown::Document.new(data).to_html
+        # data = GitHub::Markup.render(@name, data)
         if data.nil?
           raise "There was an error converting #{@name} to HTML."
         end
